@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
-export default function Clicker() {
-    const [count, setCount] = useState( parseInt(localStorage.getItem('count') ?? 0) )
+export default function Clicker({keyName}) {
+    const [count, setCount] = useState( parseInt(localStorage.getItem(keyName) ?? 0) )
     
     //trigger on first render
     useEffect(()=>{
@@ -11,7 +11,7 @@ export default function Clicker() {
 
         // will run only when the component is destroyed/disposed 
         return () => {
-            localStorage.removeItem('count')
+            localStorage.removeItem(keyName)
             //console.log('count '+count)
             //console.log('ONLY WHEN COMPONENT IS BEING DISPOSED!!, will run only when the component is destroyed/disposed ')
         }
@@ -19,7 +19,7 @@ export default function Clicker() {
 
     //trigger when 'count' changes
     useEffect(()=>{
-        localStorage.setItem('count',count)
+        localStorage.setItem(keyName, count)
     },[count])
 
     const buttonClick = () => {
