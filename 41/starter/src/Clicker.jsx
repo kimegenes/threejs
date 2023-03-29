@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export default function Clicker({keyName}) {
+export default function Clicker({increment, keyName}) {
     const [count, setCount] = useState( parseInt(localStorage.getItem(keyName) ?? 0) )
     
     //trigger on first render
@@ -24,6 +24,7 @@ export default function Clicker({keyName}) {
 
     const buttonClick = () => {
         setCount( (value) => {return value +1} )
+        increment()
     }
     
     return <div>

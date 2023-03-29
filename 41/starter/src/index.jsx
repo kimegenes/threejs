@@ -5,5 +5,5 @@ import App from './App.jsx'
 const root = createRoot(document.querySelector('#root'))
 
 root.render(
-    <App></App>
+    <App clickersCount={4}></App>
 )
