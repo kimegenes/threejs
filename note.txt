@@ -2,3 +2,22 @@ https://threejs-journey.com/lessons/first-react-application
 
 kimegenes@hotmail.com
 KrHjW0&A8*t85X7VBbjb
+
+---
+ 
+Vite
+Create
+create a project by running "npm create vite@latest"
+
+cd C:\Users\ke\Documents\react\threejs\41\starter
+
+Install packages from package.json 
+C:\Users\ke\Documents\react\threejs\41\starter> npm install
+
+Start application
+C:\Users\ke\Documents\react\threejs\41\starter> npm run dev
+
+Git
+git add .
+git commit -m "my commit"
+git push
