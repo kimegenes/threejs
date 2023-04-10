@@ -8,7 +8,6 @@ extend({ OrbitControls: OrbitControls })
 export default function Eperience() 
 {
     const {camera, gl} = useThree()
-    console.log(camera)
     const groupRef = useRef()
     const cubeRef = useRef()
     
